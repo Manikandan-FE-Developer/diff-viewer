@@ -1,0 +1,27 @@
+{
+  "name": "diff-viewer",
+  "version": "1.0.0",
+  "description": "A React component to visualize line-by-line differences between two text inputs.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Manikandan-FE-Developer/diff-viewer"
+  },
+  "keywords": ["diff", "viewer", "react", "typescript"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  }
+}

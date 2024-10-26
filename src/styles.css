@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Mulish';
+  src: url('src/assets/fonts/Mulish-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  src: url('src/assets/icons/fa-solid-900.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; 
+}
+html body{
+  background-color: #dee9f980;
+}
+.config .btn{
+  font-size: 12px;
+}
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.welcome h3{
+  font-weight: bold;
+}
+.toaster {
+  font-size: 14px;
+  width: 300px !important;
+}
+/* Header */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 5px #afaeae;
+  z-index: 10;
+} 
+.nav .logo{
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.nav .logo img{
+  width: 50px;
+}
+.nav .logo h4{
+  padding: 10px 0 0 10px;
+  color: #800040;
+  font-family: impact;
+}
+.nav h5{
+  margin-top: 10px;
+}
+.nav h5 a {
+  color: #243E85;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Side Bar */
+.sidebar{
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 18%;
+  height: 150%;
+  background-color: white;
+  box-shadow: 2px 2px 4px #e7e5e566;
+  z-index: 1;
+  overflow-x: auto;
+}
+.sidebar ul{
+  position: relative;
+  left: -15px;
+}
+.sidebar .sidebarSpinner{
+  width: 40px;
+  margin: 10px 0 0 20px;
+}
+.sidebar ul li{
+  color: #004080;
+  text-align: left;
+  list-style: none;
+  margin: 40px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+.sidebar ul li a{
+  color: #004080;
+  font-weight: bold;
+  text-decoration: none;
+}
+.sidebar .sublist li{
+  font-size: 12px;
+  margin: 15px 0;
+  text-align: left;
+}
+.sidebar .sublist li a{
+  color: #004080;
+  text-decoration: none;
+}
+.sidebar ul li.selected{
+  width: 130%;
+  display: block;
+  background-color: #004080;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.sidebar ul li.selected a{
+  color: white;
+}
+/* Config, Generate, Upload, Common & Harness */
+.config {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+.config .form-group{
+  padding: 20px;
+  width: 50%;
+  min-height: 450px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #e7e5e5;
+}
+.config .form-group h5{
+  text-align: center;
+  color: #004080;
+  font-weight: bold;
+  padding: 5px;
+}
+.config .input-container{
+  text-align: left;
+  margin: 0 10px 10px 5px;
+}
+.config .input-container div{
+  padding: 5px 0;
+  margin-top: 5px;
+}
+.config .input-container label{
+  font-size: 12px;
+  margin-bottom: -10px;
+  font-weight: bold;
+}
+.config .input-container input{
+  width: 100%;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 14px;
+}
+.config .keyValue-group input {
+  width: 45%;
+  margin: -10px 10px 10px 0;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  text-align: left;
+}
+.config input:focus{
+  outline-color: #004080;
+}
+.config img{
+  width: 30px;
+  margin: -2px 5px 0 -10px;
+  cursor: pointer;
+  align-self: center;
+}
+.config .spin-con{
+  text-align: center;
+}
+.config .spin-con .spinner{
+  width: 80px;
+  margin: 0 0 10px 0;
+}
+.config .cards li {
+  font-size: 14px;
+  padding: 8px 0;
+  display: flex;
+  align-items: stretch;
+  margin-left: 5px;
+}
+.config .cards .card{
+  width: 45%;
+  margin: 0 13px 0 0;
+  color: #004080;
+  background-color: #c0d3e2;
+  text-align: left;
+  padding: 6px;
+  border-radius: 4px;
+  word-wrap: break-word;
+  display: inline-block;
+}
+.config .cards .card span{
+  font-weight: bold;
+}
+.config .cards .editable{
+  width: 47%;
+  margin: -5px 7px -5px -5px;
+  color: #004080;
+  text-align: left;
+  padding: 6px;
+  border-radius: 4px;
+  word-wrap: break-word;
+  display: inline-block;
+}
+.config .cards .editable input{
+  width: 100%;
+  padding: 4px;
+}
+.config .error{
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  font-style: italic;
+}
+.config .success {
+  color: green;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 10px 0;
+  font-style: italic;
+}
+.config .textarea{
+  width: 100%;
+  border-radius: 4px;
+  font-size: 13px;
+  overflow-x: auto;
+  white-space: pre;
+}
+.config .textarea:focus{
+  outline-color: #004080;
+}
+.config select{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 14px;
+}
+.config .download{
+  text-align: center;
+}
+.config .download button{
+  margin-right: 10px;
+}
+/* Preview popup window */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  max-width: 80%;
+  height: 80%;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.modal-head{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.modal-head h4{
+  text-align: center;
+  font-weight: bold;
+}
+.modal-head i{
+  cursor: pointer;
+  font-size: 20px;
+}
+.modal-body{
+  text-align: left;
+  overflow-y: auto;
+  background-color: white;
+}
+/* Diff Viewer */
+.diff-viewer {
+  display: flex;
+}
+.diff-column {
+  width: 50%;
+  position: relative;
+}
+.diff-column h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid lightgray;
+  background-color: rgb(245, 244, 244);
+}
+.diff-container {
+  display: flex;
+}
+.diff-content{
+  width: 100%;
+}
+.diff-line div{
+  padding: 7px 0;
+  width: 1100px;
+}
+.line-number {
+  font-size: 12px;
+  width: 40px;
+  height: 35px;
+  text-align: right;
+  padding: 8px 15px 0 15px;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  background-color: rgb(245, 244, 244);
+}
+.same {
+  background-color: none;
+}
+.old-line {
+  flex: 1;
+  padding-top: 5px;
+  background-color: rgb(252, 200, 200);
+}
+.new-line {
+  flex: 1;
+  padding-top: 5px;
+  background-color: rgb(204, 243, 204);
+}
+.removed {
+  background-color: rgb(239, 121, 121);
+}
+.added {
+  background-color: rgb(130, 227, 130);
+}
+/* Footer */
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: 8px;
+  box-shadow: 1px 1px 5px #afaeae;
+}
+.footer img{
+  width: 20px;
+  padding-right: 4px;
+}
+.footer span{
+  font-weight: bold;
+}
